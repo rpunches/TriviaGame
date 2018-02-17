@@ -11,7 +11,8 @@ function startTimer() {
 }
 
 
-function submitAnswers() {
+function submitAnswers(e) {
+    e.preventDefault();
     var total = 10;
     var score = 0;
 
@@ -40,7 +41,9 @@ function submitAnswers() {
             score++;
         }
     }
-
+    $('#quoteGame').on('submit', function(e){
+        e.preventDefault();
+    });
     alert('You scored ' + score + " out of " + total);
 
     var results = document.getElementById('results');
