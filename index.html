@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Sheet/CDN Links -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+English" rel="stylesheet">
+    <title>Trivia Game</title>
+</head>
+
+<!-- Start Main Body -->
+
+<body>
+    <div class="container">
+        <!-- Opening Screen -->
+        <div id="openScreen">
+            <h1>Military Movie Quote Game</h1>
+            Match each quote to the military movie it came from! You have 90 seconds to match 10 quotes! Good luck!
+            <hr>
+            <button onClick="startTimer()">Start the Game!</button>
+        </div>
+        <br>
+        <!-- End of Open Screen -->
+
+
+
+        <!-- Timer -->
+        <div class="timeText">Time Left:</div>
+        <div class="timer">90</div>
+    </div>
+    <div class="container">
+        <div class="col-md-12">
+            <form id="quoteGame" name="quoteForm" onsubmit="submitAnswers(); return false">
+                <p>
+                    <!-- Quote 0 -->
+                    "Here's a Bible verse I think about sometimes. Many times. It goes: And I heard the voice of Lord saying: Whom shall I send
+                    and who will go for us? And... I said: 'Here am I , send me!'"
+                    <br>
+                    <!-- Answer Options -->
+                    <input type="radio" name="q0" value="a">
+                    <i>Dunkirk</i>
+                    <br>
+                    <input type="radio" name="q0" value="b">
+                    <i>Hacksaw Ridge</i>
+                    <br>
+                    <input type="radio" name="q0" value="c">
+                    <i>Fury</i>
+                    <br>
+                </p>
+                <!-- End Answer Options -->
+                <hr>
+                <!-- Quote 1 -->
+                <p>
+                    "You remember it. Remember every bit of it, ’cause we are on the eve of a day that people are going to talk about long after
+                    we are dead and gone."
+                    <br>
+                    <!-- Answer Options -->
+                    <input type="radio" name="q1" value="a">
+                    <i>Pearl Harbor</i>
+                    <br>
+                    <input type="radio" name="q1" value="b">
+                    <i>Patton</i>
+                    <br>
+                    <input type="radio" name="q1" value="c">
+                    <i>The Longest Day</i>
+                    <br>
+                </p>
+                <!-- End Answer Options -->
+                <hr>
+                <!-- Quote 2 -->
+                <p>
+                    "Why? They won’t understand. They won’t understand why we do it. They won’t understand that it’s about the men next to you,
+                    and that’s it. That’s all it is.”
+                    <br>
+                    <!-- Answer Options -->
+                    <input type="radio" name="q2" value="a">
+                    <i>Thin Red Line</i>
+                    <br>
+                    <input type="radio" name="q2" value="b">
+                    <i>Black Hawk Down</i>
+                    <br>
+                    <input type="radio" name="q2" value="c">
+                    <i>Lone Survivor</i>
+                    <br>
+                </p>
+                <!-- End Answer Options -->
+                <hr>
+                <!-- Quote 3 -->
+                <p>
+                    "Oh, yes, and one more thing, dear Lord, about our enemies, ignore their heathen prayers and help us blow those little bastards
+                    straight to Hell. Amen."
+                    <br>
+                    <!-- Answer Options -->
+                    <input type="radio" name="q3" value="a">
+                    <i>Good Morning, Vietnam</i>
+                    <br>
+                    <input type="radio" name="q3" value="b">
+                    <i>Inglorious Basterds</i>
+                    <br>
+                    <input type="radio" name="q3" value="c">
+                    <i>We Were Soldiers</i>
+                    <br>
+                </p>
+                <!-- End Answer Options -->
+                <hr>
+                <!-- Quote 4 -->
+                <p>
+                    "We're not here to do the decent thing, we're here to follow fucking orders!"
+                    <br>
+                    <!-- Answer Options -->
+                    <input type="radio" name="q4" value="a">
+                    <i>Saving Private Ryan</i>
+                    <br>
+                    <input type="radio" name="q4" value="b">
+                    <i>Platoon</i>
+                    <br>
+                    <input type="radio" name="q4" value="c">
+                    <i>Three Kings</i>
+                    <br>
+                </p>
+                <!-- End Answer Options -->
+                <hr>
+                <!-- Quote 5 -->
+                <p>
+                    "Courage is when you're the only guy who knows how shit-scared you really are."
+                    <br>
+                    <!-- Answer Options -->
+                    <input type="radio" name="q5" value="a">
+                    <i>A Few Good Men</i>
+                    <br>
+                    <input type="radio" name="q5" value="b">
+                    <i>Jarhead</i>
+                    <br>
+                    <input type="radio" name="q5" value="c">
+                    <i>Tigerland</i>
+                    <br>
+                </p>
+                <!-- End Answer Options -->
+                <hr>
+                <!-- Quote 6 -->
+                <p>
+                    "Never tell a soldier that he does not know the cost of war."
+                    <br>
+                    <!-- Answer Options -->
+                    <input type="radio" name="q6" value="a">
+                    <i>Apocalypse Now</i>
+                    <br>
+                    <input type="radio" name="q6" value="b">
+                    <i>Eye in the Sky</i>
+                    <br>
+                    <input type="radio" name="q6" value="c">
+                    <i>Born on the 4th of Julyy</i>
+                    <br>
+                </p>
+                <!-- End Answer Options -->
+                <hr>
+                <!-- Quote 7 -->
+                <p>
+                    "We who have seen war, will never stop seeing it. In the silence of the night, we will always hear the screams."
+                    <br>
+                    <!-- Answer Options -->
+                    <input type="radio" name="q7" value="a">
+                    <i>We Were Soldiers</i>
+                    <br>
+                    <input type="radio" name="q7" value="b">
+                    <i>The Thin Red Line</i>
+                    <br>
+                    <input type="radio" name="q7" value="c">
+                    <i>American Sniper</i>
+                    <br>
+                </p>
+                <!-- End Answer Options -->
+                <hr>
+                <!-- Quote 8 -->
+                <p>
+                    "There's enough bang in there to send us all to Jesus. I'm gonna die, I wanna die comfortable."
+                    <br>
+                    <!-- Answer Options -->
+                    <input type="radio" name="q8" value="a">
+                    <i>Inglorious Basterds</i>
+                    <br>
+                    <input type="radio" name="q8" value="b">
+                    <i>The Hurt Locker</i>
+                    <br>
+                    <input type="radio" name="q8" value="c">
+                    <i>Full Metal Jacket</i>
+                    <br>
+                </p>
+                <!-- End Answer Options -->
+                <hr>
+                <!-- Quote 9 -->
+                <p>
+                    "Best job I ever had."
+                    <br>
+                    <!-- Answer Options -->
+                    <input type="radio" name="q9" value="a">
+                    <i>Lone Survivor</i>
+                    <br>
+                    <input type="radio" name="q9" value="b">
+                    <i>13 Hours</i>
+                    <br>
+                    <input type="radio" name="q9" value="c">
+                    <i>Fury</i>
+                    <br>
+                </p>
+                <!-- End Answer Options -->
+
+                <!-- Submit Answer Button -->
+                <input type="submit" value="Submit Answers">
+            </form>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" script src="assets/javascript/app.js"></script>
+
+</html>
